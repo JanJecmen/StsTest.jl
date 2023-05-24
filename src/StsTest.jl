@@ -19,15 +19,17 @@ function f(x::String)
 end
 
 # replaced with bool
+# made unstable
 function f(x::Bool)
     println("f(x::Bool)")
-    x
+    (rand() < 0.5) ? x : "$x"
 end
 
 # kept same
+# made stable
 function g(x::Float64)
     println("g(x::Float64)")
-    (rand() < 0.5) ? x : "$x"
+    x
 end
 
 # kept same
@@ -57,6 +59,9 @@ end
 # added for change in method count
 function dummy()
     println("dummy")
+end
+function dummy2()
+    println("dummy2")
 end
 
 end
