@@ -1,0 +1,13 @@
+name = "StsTest"
+uuid = "18233c99-dc9a-4a54-8d25-11173471e2b9"
+authors = ["Jan Jecmen"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
