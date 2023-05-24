@@ -1,57 +1,62 @@
 module StsTest
 
-# keep same
+# kept same
 function f(x::Any)
     println("f(x::Any)")
     x
 end
 
-# keep same
+# kept same
 function f(x::Int8)
     println("f(x::Int8)")
     x
 end
 
-# replace with string
-function f(x::Int)
-    println("f(x::Int)")
+# replaced with string
+function f(x::String)
+    println("f(x::String)")
     x
 end
 
-# replace with bool
-function f(x::Float64)
-    println("f(x::Float64)")
+# replaced with bool
+function f(x::Bool)
+    println("f(x::Bool)")
     x
 end
 
-# keep same
+# kept same
 function g(x::Float64)
     println("g(x::Float64)")
     (rand() < 0.5) ? x : "$x"
 end
 
-# keep same
+# kept same
 function g(x::Int)
     println("g(x::Int)")
     x
 end
 
-# remove
-function r(x::Int)
-    println("r(x::Int)")
+# added
+function s(x::Number)
+    println("s(x::Number)")
     x
 end
 
-# rename, keep signature
-function a(x::Int)
-    println("a(x::Int)")
+# renamed, kept signature
+function b(x::Int)
+    println("b(x::Int)")
     x
 end
 
-# rename and change signature
-function v(x::Int)
-    println("v(x::Int)")
+# renamed and changed signature
+function w(x::String)
+    println("w(x::String)")
     x
+end
+
+# added for change in method count
+function dummy()
+    println("dummy")
 end
 
 end
