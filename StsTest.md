@@ -2,10 +2,10 @@
 
 ### Signature `Tuple{typeof(StsTest.f), Bool}`
 
-stable   ==`23268b8`=>   unstable  
+Commit `23268b8`: stable => unstable  
 
 ### Signature `Tuple{typeof(StsTest.g), Float64}`
 
-|   ==`3572820`=>   unstable  
-unstable   ==`23268b8`=>   stable  
+Commit `3572820`: | => unstable  
+Commit `23268b8`: unstable => stable  
 
